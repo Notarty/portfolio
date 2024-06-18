@@ -1,0 +1,92 @@
+Fiche de spécifications de certaines fonctions et procédures nécessaires :
+
+ChargerGrillePredefinie
+
+Type : Procédure
+Commentaire : Charge une grille préremplie aléatoire depuis un fichier .sud.
+Paramètres :
+grillePredefinie (Sortie) : tableau 2D d'entiers, grille préremplie aléatoire
+Aucun résultat retourné.
+
+CopierGrille
+
+Type : Procédure
+Commentaire : Copie la grille préremplie dans la grille de jeu.
+Paramètres :
+grillePredefinie (Entrée) : tableau 2D d'entiers, grille préremplie
+grille (Sortie) : tableau 2D d'entiers, grille de jeu
+Aucun résultat retourné.
+
+AfficherGrille
+
+Type : Procédure
+Commentaire : Affiche la grille de jeu actuelle.
+Paramètres :
+grille (Entrée) : tableau 2D d'entiers, grille de jeu
+Aucun résultat retourné.
+
+
+AffecterValeur
+
+Type : Procédure
+Commentaire : Affecte une valeur à une case de la grille de jeu.
+Paramètres :
+grille (Entrée/Sortie) : tableau 2D d'entiers, grille de jeu
+colonne (Entrée) : entier, numéro de colonne
+ligne (Entrée) : entier, numéro de ligne
+valeur (Entrée) : entier, valeur à affecter
+Aucun résultat retourné.
+
+LireCoordonnees
+
+Type : Procédure
+Commentaire : Demande à l'utilisateur de choisir une colonne et une ligne.
+Paramètres :
+colonne (Sortie) : entier, numéro de colonne choisi par l'utilisateur
+ligne (Sortie) : entier, numéro de ligne choisi par l'utilisateur
+Aucun résultat retourné.
+
+LireValeur
+
+Type : Procédure
+Commentaire : Demande à l'utilisateur de saisir une valeur.
+Paramètres :
+valeur (Sortie) : entier, valeur saisie par l'utilisateur
+Aucun résultat retourné.
+
+GrilleComplete
+
+Type : Fonction
+Commentaire : Vérifie si la grille est entièrement remplie.
+Paramètres :
+grille (Entrée) : tableau 2D d'entiers, grille de jeu
+Résultat : Booléen (Vrai si la grille est complète, Faux sinon).
+
+EstCasePreremplie
+
+Type : Fonction
+Commentaire : Vérifie si une case donnée est préremplie.
+Paramètres :
+grille (Entrée) : tableau 2D d'entiers, grille de jeu
+colonne (Entrée) : entier, numéro de colonne
+ligne (Entrée) : entier, numéro de ligne
+Résultat : Booléen (Vrai si la case est préremplie, Faux sinon).
+
+EstValeurValide
+
+Type : Fonction
+Commentaire : Vérifie si une valeur donnée est valide (entre 1 et 9).
+Paramètres :
+valeur (Entrée) : entier, valeur saisie par l'utilisateur
+Résultat : Booléen (Vrai si la valeur est valide, Faux sinon).
+
+EstValeurPresente
+
+Type : Fonction
+Commentaire : Vérifie si une valeur donnée est déjà présente dans la même ligne, colonne ou bloc.
+Paramètres :
+grille (Entrée) : tableau 2D d'entiers, grille de jeu
+colonne (Entrée) : entier, numéro de colonne
+ligne (Entrée) : entier, numéro de ligne
+valeur (Entrée) : entier, valeur à vérifier
+Résultat : Booléen (Vrai si la valeur est déjà présente, Faux sinon).

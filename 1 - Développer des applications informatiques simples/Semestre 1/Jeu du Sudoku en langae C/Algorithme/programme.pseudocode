@@ -1,0 +1,40 @@
+programme Sudoku c’est
+//Déclaration des prototypes;
+    procédure ChargerGrillePredefinie(sortF grille_predefinie:tableau de [9][9] de entiers);
+    procédure CopierGrille(entF grillePredefinie:tableau de [9][9] de entiers, sortF grille:tableau de [9][9] de entiers);
+    procédure AfficherGrille(entF grille:tableau [9][9] de entiers);
+    procédure AffecterValeur(entF/sortF grille:tableau [9][9] de entiers, entF colonne:entier,entF ligne:entier, entF valeur:entier);
+    procédure LireCoordonnees(sortF colonne:entier, sortF ligne:entier);
+    procédure LireValeur(sortF valeur:entier),
+    fonction GrilleComplete(entF grille:tableau [9][9] de entiers)délivre booléen;
+    fonction EstCasePreremplie(entF grille:tableau [9][9] de entiers, entF colonne:entier,entF ligne:entier)délivre booléen;
+    fonction EstValeurValide(entF valeur:entier)délivre booléen;
+    fonction EstValeurPresente(entF grille:tableau [9][9] de entiers, entF colonne:entier,entF ligne:entier, entF valeur:entier)délivre booléen;
+//main
+début
+    //Déclaration des variables
+	grille : tableau [9][9] de entiers;
+    grillePredefinie :tableau de [9][9] de entiers;
+    //Traitement
+    Tant que non GrilleComplete(grille) faire
+        LireCoordonnees(colonne, ligne);            // Demander à l'utilisateur de choisir une colonne et une ligne
+        Si Non EstCasePréremplie(grille, colonne, ligne) alors
+            LireValeur(valeur);                    // Demander à l'utilisateur de saisir une valeur
+            Si EstValeurValide(valeur) alors
+                Si Non EstValeurPresente(grille, colonne, ligne, valeur) alors
+                    Ecrire("La valeur est déja présente");
+                Sinon
+                    AffecterValeur(grille, colonne, ligne, valeur);
+                    EffacerEcran;               // Effacer l'écran pour afficher la grille mise à jour (clear en C)
+                    AfficherGrille(grille);      // Afficher la grille mise à jour
+                FinSi
+            Sinon
+                Ecrire("La valeur est invalide");
+            FinSi
+        Sinon
+            Ecrire("La case est préremplie et non modifiable");
+        FinSi
+    FinTantque
+    //Affichage
+    Ecrire("Félicitation la grille est complétée");
+fin
